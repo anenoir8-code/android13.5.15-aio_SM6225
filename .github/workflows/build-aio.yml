@@ -1,4 +1,4 @@
-name: "Build Kernel"
+name: "Build Kernel - Sapphire/n"
 
 env:
   OUT_DIR: "out"
@@ -41,6 +41,7 @@ jobs:
           fi
           MESSAGE="<b>🔨 Kernel Build Started</b>%0A%0A"
           MESSAGE="${MESSAGE}<b>📦 Type:</b> ${BUILD_TYPE}%0A"
+          MESSAGE="${MESSAGE}<b>📱 Device:</b> Redmi Note 13 4G (sapphire/n)%0A"
           MESSAGE="${MESSAGE}<b>📁 Repository:</b> ${{ github.repository }}%0A"
           MESSAGE="${MESSAGE}<b>🔄 Trigger:</b> ${{ github.event_name }}%0A"
           MESSAGE="${MESSAGE}<b>🆔 Run:</b> #${{ github.run_number }}%0A"
@@ -785,6 +786,7 @@ jobs:
 
           MESSAGE="<b>🎉 Build Success!</b>%0A%0A"
           MESSAGE="${MESSAGE}<b>✏️ Type:</b> ${BUILD_TYPE}%0A"
+          MESSAGE="${MESSAGE}<b>📱 Device:</b> Redmi Note 13 4G (sapphire/n)%0A"
           MESSAGE="${MESSAGE}<b>🏷️ Tag:</b> <code>${{ env.RELEASE_TAG }}</code>%0A"
           MESSAGE="${MESSAGE}<b>⏱️ Build Time:</b> $((DURATION / 60))m $((DURATION % 60))s%0A"
           MESSAGE="${MESSAGE}<b>🔗 Release:</b> <a href='${RELEASE_URL}'>Download</a>%0A"
@@ -838,7 +840,8 @@ jobs:
           ICON="❓" && TEXT="Unknown ($JOB_STATUS)"
 
           MESSAGE="<b>${ICON} ${TEXT}!</b>%0A%0A"
-          MESSAGE="${MESSAGE}<b>📦 Workflow:</b> Build Kernel%0A"
+          MESSAGE="${MESSAGE}<b>📱 Device:</b> Redmi Note 12/13 4G (sapphire/n)%0A"
+          MESSAGE="${MESSAGE}<b>📦 Workflow:</b> Build Kernel - Sapphire/n%0A"
           MESSAGE="${MESSAGE}<b>🕐 Time:</b> $(TZ='Asia/Jakarta' date +'%H:%M:%S WIB')%0A"
           MESSAGE="${MESSAGE}<b>🔗 Logs:</b> <a href='${RUN_URL}'>View Logs</a>"
 
